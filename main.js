@@ -33,9 +33,9 @@ function getTableNumber(input,data){
   let found = [];
   // loop through all names
   data.forEach((element)=>{
-    element.forEach((name)=>{
+    element.forEach((name, index)=>{
       // if find, push name and table number to an array
-      if (name.includes(input)){
+      if (index != 0 && name.includes(input)){
         let f = {
           name: name,
           table: element[0]
